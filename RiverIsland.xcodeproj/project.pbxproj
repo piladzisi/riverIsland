@@ -11,10 +11,15 @@
 		B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7E24FD34C500477823 /* SceneDelegate.swift */; };
 		B5779F8124FD34C500477823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F8024FD34C500477823 /* ViewController.swift */; };
 		B5779F8424FD34C500477823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5779F8224FD34C500477823 /* Main.storyboard */; };
-		B5779F8624FD34C800477823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5779F8524FD34C800477823 /* Assets.xcassets */; };
 		B5779F8924FD34C800477823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5779F8724FD34C800477823 /* LaunchScreen.storyboard */; };
 		B5779F9424FD34C900477823 /* RiverIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F9324FD34C900477823 /* RiverIslandTests.swift */; };
 		B5779F9F24FD34C900477823 /* RiverIslandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F9E24FD34C900477823 /* RiverIslandUITests.swift */; };
+		B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FAD24FD350D00477823 /* LoginScreen.swift */; };
+		B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FB024FD388300477823 /* UIVIew+Extensions.swift */; };
+		B5779FB524FD415400477823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5779FB424FD415400477823 /* Assets.xcassets */; };
+		B5779FB924FD5CE500477823 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FB824FD5CE500477823 /* Constants.swift */; };
+		B5779FBF24FD7B3A00477823 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FBD24FD7B3A00477823 /* MainViewController.swift */; };
+		B5779FC024FD7B3A00477823 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5779FBE24FD7B3A00477823 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +45,6 @@
 		B5779F7E24FD34C500477823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5779F8024FD34C500477823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5779F8324FD34C500477823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B5779F8524FD34C800477823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5779F8824FD34C800477823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5779F8A24FD34C800477823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5779F8F24FD34C900477823 /* RiverIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +53,12 @@
 		B5779F9A24FD34C900477823 /* RiverIslandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverIslandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5779F9E24FD34C900477823 /* RiverIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverIslandUITests.swift; sourceTree = "<group>"; };
 		B5779FA024FD34C900477823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5779FAD24FD350D00477823 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		B5779FB024FD388300477823 /* UIVIew+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extensions.swift"; sourceTree = "<group>"; };
+		B5779FB424FD415400477823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5779FB824FD5CE500477823 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B5779FBD24FD7B3A00477823 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B5779FBE24FD7B3A00477823 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +109,16 @@
 		B5779F7B24FD34C500477823 /* RiverIsland */ = {
 			isa = PBXGroup;
 			children = (
+				B5779FB824FD5CE500477823 /* Constants.swift */,
+				B5779FAF24FD387100477823 /* Extensions */,
+				B5779FAC24FD34E500477823 /* LoginScreen */,
+				B5779FBC24FD7B1F00477823 /* MainScreen */,
 				B5779F7C24FD34C500477823 /* AppDelegate.swift */,
 				B5779F7E24FD34C500477823 /* SceneDelegate.swift */,
 				B5779F8024FD34C500477823 /* ViewController.swift */,
-				B5779F8224FD34C500477823 /* Main.storyboard */,
-				B5779F8524FD34C800477823 /* Assets.xcassets */,
 				B5779F8724FD34C800477823 /* LaunchScreen.storyboard */,
+				B5779FB424FD415400477823 /* Assets.xcassets */,
+				B5779F8224FD34C500477823 /* Main.storyboard */,
 				B5779F8A24FD34C800477823 /* Info.plist */,
 			);
 			path = RiverIsland;
@@ -126,6 +140,31 @@
 				B5779FA024FD34C900477823 /* Info.plist */,
 			);
 			path = RiverIslandUITests;
+			sourceTree = "<group>";
+		};
+		B5779FAC24FD34E500477823 /* LoginScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B5779FAD24FD350D00477823 /* LoginScreen.swift */,
+			);
+			path = LoginScreen;
+			sourceTree = "<group>";
+		};
+		B5779FAF24FD387100477823 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5779FB024FD388300477823 /* UIVIew+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5779FBC24FD7B1F00477823 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B5779FBD24FD7B3A00477823 /* MainViewController.swift */,
+				B5779FBE24FD7B3A00477823 /* MainViewController.xib */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5779F8924FD34C800477823 /* LaunchScreen.storyboard in Resources */,
-				B5779F8624FD34C800477823 /* Assets.xcassets in Resources */,
+				B5779FB524FD415400477823 /* Assets.xcassets in Resources */,
 				B5779F8424FD34C500477823 /* Main.storyboard in Resources */,
+				B5779FC024FD7B3A00477823 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +299,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5779FBF24FD7B3A00477823 /* MainViewController.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
+				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,
+				B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */,
 				B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */,
 				B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */,
+				B5779FB924FD5CE500477823 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
