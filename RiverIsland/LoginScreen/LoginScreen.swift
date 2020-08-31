@@ -17,8 +17,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         email.text = Constants.Strings.email
         email.textColor = .white
         email.clearsOnBeginEditing = true
-        email.layer.borderWidth = Constants.one
-        email.layer.borderColor = Constants.Colors.white.cgColor
         return email
     }()
 
@@ -29,8 +27,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         password.clearsOnBeginEditing = true
         password.isSecureTextEntry = true
         password.textColor = .white
-        password.layer.borderWidth = Constants.one
-        password.layer.borderColor = Constants.Colors.white.cgColor
         return password
     }()
 
@@ -43,8 +39,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     }()
 
     private lazy var stackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [
-                                                       signInLabel,
+        let stackView = UIStackView(arrangedSubviews: [signInLabel,
                                                        emailTextField,
                                                        passwordTextField])
         stackView.axis = .vertical
@@ -73,17 +68,37 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         view.backgroundColor = .black
         view.addSubview(stackView)
         setupConstraints()
-        passwordTextField.delegate = self
         animateUIView()
-        
+
+        setNavigationBar()
+        setupEmailAndPassword()
+    }
+
+    private func setNavigationBar() {
         navigationItem.hidesBackButton = true
         navigationController?.navigationBar.backgroundColor = UIColor.clear
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
+        let rightButton = UIBarButtonItem(
             title: Constants.Button.skip,
             style: .plain,
             target: self,
             action: #selector(skipButtonAction)
         )
+        rightButton.tintColor = .white
+        navigationItem.rightBarButtonItem = rightButton
+    }
+
+    //TODO: save email and password when entered
+    private func setupEmailAndPassword() {
+        passwordTextField.delegate = self
+        emailTextField.delegate = self
+        emailTextField.keyboardType = UIKeyboardType.emailAddress
+        emailTextField.addBottomBorder()
+        passwordTextField.addBottomBorder()
+    }
+
+    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -122,9 +137,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         setupStackViewConstraints()
     }
 
-    // Limits Password to 6 characters
+    // Limits Password to 8 characters
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 6
+        let maxLength = 8
         let currentString: NSString = (textField.text ?? "") as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString

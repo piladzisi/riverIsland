@@ -20,6 +20,9 @@
 		B5779FB924FD5CE500477823 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FB824FD5CE500477823 /* Constants.swift */; };
 		B5779FBF24FD7B3A00477823 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FBD24FD7B3A00477823 /* MainViewController.swift */; };
 		B5779FC024FD7B3A00477823 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5779FBE24FD7B3A00477823 /* MainViewController.xib */; };
+		B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */; };
+		B57B837E24FD96660012AEB3 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B837C24FD96660012AEB3 /* MainViewCell.swift */; };
+		B57B837F24FD96660012AEB3 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57B837D24FD96660012AEB3 /* MainViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		B5779FB824FD5CE500477823 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B5779FBD24FD7B3A00477823 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5779FBE24FD7B3A00477823 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		B57B837C24FD96660012AEB3 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		B57B837D24FD96660012AEB3 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				B5779FB024FD388300477823 /* UIVIew+Extensions.swift */,
+				B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -163,6 +170,8 @@
 			children = (
 				B5779FBD24FD7B3A00477823 /* MainViewController.swift */,
 				B5779FBE24FD7B3A00477823 /* MainViewController.xib */,
+				B57B837C24FD96660012AEB3 /* MainViewCell.swift */,
+				B57B837D24FD96660012AEB3 /* MainViewCell.xib */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 				B5779FB524FD415400477823 /* Assets.xcassets in Resources */,
 				B5779F8424FD34C500477823 /* Main.storyboard in Resources */,
 				B5779FC024FD7B3A00477823 /* MainViewController.xib in Resources */,
+				B57B837F24FD96660012AEB3 /* MainViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +309,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57B837E24FD96660012AEB3 /* MainViewCell.swift in Sources */,
 				B5779FBF24FD7B3A00477823 /* MainViewController.swift in Sources */,
+				B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
 				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,
 				B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */,
