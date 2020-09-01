@@ -58,6 +58,27 @@ extension MainViewController: UITableViewDataSource {
         //        cell.displayInfo(of: reviewCellModel)
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: Self.cellReuseIdentifier) as? MainViewCell else { return }
+        let destinationViewController = ImageViewController()
+         navigationController?.pushViewController(destinationViewController, animated: true)
+    }
+
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        //if such cell exists and destination controller (the one to show) exists too..
+//        if let subjectCell = tableView.cellForRowAtIndexPath(indexPath as IndexPath),
+//            let destinationViewController = ImageViewController()
+//            if let text = subjectCell.textLabel?.text {
+//                destinationViewController.textToShow = text
+//            } else {
+//                destinationViewController.textToShow = "Tapped Cell's textLabel is empty"
+//            }
+//            //Then just push the controller into the view hierarchy
+//            navigationController?.pushViewController(destinationViewController, animated: true)
+//        }
+//    }
 }
 
 extension MainViewController: UITableViewDelegate {

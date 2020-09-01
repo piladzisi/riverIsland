@@ -23,6 +23,7 @@
 		B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */; };
 		B57B837E24FD96660012AEB3 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B837C24FD96660012AEB3 /* MainViewCell.swift */; };
 		B57B837F24FD96660012AEB3 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57B837D24FD96660012AEB3 /* MainViewCell.xib */; };
+		B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B838124FD9DD40012AEB3 /* ImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		B57B837C24FD96660012AEB3 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		B57B837D24FD96660012AEB3 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		B57B838124FD9DD40012AEB3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		B5779F7B24FD34C500477823 /* RiverIsland */ = {
 			isa = PBXGroup;
 			children = (
+				B57B838024FD9DA30012AEB3 /* ImageScreen */,
 				B5779FB824FD5CE500477823 /* Constants.swift */,
 				B5779FAF24FD387100477823 /* Extensions */,
 				B5779FAC24FD34E500477823 /* LoginScreen */,
@@ -174,6 +177,14 @@
 				B57B837D24FD96660012AEB3 /* MainViewCell.xib */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		B57B838024FD9DA30012AEB3 /* ImageScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B57B838124FD9DD40012AEB3 /* ImageViewController.swift */,
+			);
+			path = ImageScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 			files = (
 				B57B837E24FD96660012AEB3 /* MainViewCell.swift in Sources */,
 				B5779FBF24FD7B3A00477823 /* MainViewController.swift in Sources */,
+				B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */,
 				B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
 				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,

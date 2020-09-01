@@ -63,6 +63,22 @@ extension UIView {
         return anchoredConstraints
     }
 
+        func fadeTo(_ alpha: CGFloat, duration: TimeInterval = 0.3) {
+            DispatchQueue.main.async {
+                UIView.animate(withDuration: duration) {
+                    self.alpha = alpha
+                }
+            }
+        }
+
+    func fadeIn(_ duration: TimeInterval, alpha: CGFloat) {
+        fadeTo(alpha, duration: duration)
+        }
+
+        func fadeOut(_ duration: TimeInterval = 0.3) {
+            fadeTo(0.0, duration: duration)
+        }
+
     func fillSuperview(padding: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
         if let superviewTopAnchor = superview?.topAnchor {

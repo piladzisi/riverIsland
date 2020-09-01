@@ -53,7 +53,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         let imageView = UIImageView()
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill
         imageView.image = background
-        imageView.alpha = 0.4
+        imageView.alpha = 0.8
         return imageView
     }()
 
@@ -69,7 +69,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         view.addSubview(stackView)
         setupConstraints()
         animateUIView()
-
         setNavigationBar()
         setupEmailAndPassword()
     }
@@ -103,7 +102,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
+        backgroundImage.fadeIn(0.8, alpha: 0.4)
         // Make the navigation bar background clear
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
@@ -111,17 +110,16 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     }
 
     private func animateUIView() {
-        UIView.animate(withDuration: 1.0,
+        UIView.animate(withDuration: 1.3,
                        delay: 0.0,
                        usingSpringWithDamping: 1.0,
                        initialSpringVelocity: 1.0,
                        options: .curveEaseIn,
-                       animations: { [weak self] in
-                        guard let self = self else {
-                            return
-                        }
-                        self.view.layoutIfNeeded()
-            }, completion: nil)
+                       animations: {
+                        self.stackView.center = CGPoint(x: 200, y: 0)
+                        self.stackView.layoutIfNeeded()
+                        },
+            completion: nil)
     }
 
     private func setupStackViewConstraints() {
@@ -137,7 +135,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         setupStackViewConstraints()
     }
 
-    // Limits Password to 8 characters
+    // Limit Password to 8 characters
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxLength = 8
         let currentString: NSString = (textField.text ?? "") as NSString
