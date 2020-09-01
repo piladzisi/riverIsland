@@ -23,8 +23,11 @@ struct Constants {
         static let email = "Email address"
         static let password = "Password"
         static let signIn = "Sign in"
+        static let dontHaveAccount = "Don't have and account?"
     }
     enum Button {
         static let skip = "Skip"
+        static let forgotPassword = "Forgot Password?"
+        static let signUp = "Sign up"
     }
 }

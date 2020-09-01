@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MainViewCell: UITableViewCell {
+class ProductCell: UITableViewCell {
 
-    static let identifier = "MainViewCell"
+    static let identifier = "ProductCell"
     
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

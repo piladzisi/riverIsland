@@ -15,4 +15,6 @@ class ImageViewController: UIViewController {
     super.viewDidLoad()
         view.backgroundColor = .yellow
     }
+
+    //https://static-ri.ristack-3.nn4maws.net/v1/plp/en_gb/2506/products.json
 }

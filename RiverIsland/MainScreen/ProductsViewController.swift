@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class ProductsViewController: UIViewController {
 
-    private static let cellNib = MainViewCell.identifier
-    private static let cellReuseIdentifier = "mainViewCellReuseIdentifier"
+    private static let cellNib = ProductCell.identifier
+    private static let cellReuseIdentifier = "productCellReuseIdentifier"
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
 
 // MARK: UITableViewDataSource
 
-extension MainViewController: UITableViewDataSource {
+extension ProductsViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         4
     }
@@ -50,7 +50,7 @@ extension MainViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: Self.cellReuseIdentifier) as? MainViewCell else {
+            withIdentifier: Self.cellReuseIdentifier) as? ProductCell else {
                 return UITableViewCell()
         }
 
@@ -61,7 +61,7 @@ extension MainViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: Self.cellReuseIdentifier) as? MainViewCell else { return }
+            withIdentifier: Self.cellReuseIdentifier) as? ProductCell else { return }
         let destinationViewController = ImageViewController()
          navigationController?.pushViewController(destinationViewController, animated: true)
     }
@@ -81,11 +81,7 @@ extension MainViewController: UITableViewDataSource {
 //    }
 }
 
-extension MainViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        56
-    }
-
+extension ProductsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         4
     }
