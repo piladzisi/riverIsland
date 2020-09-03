@@ -18,6 +18,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         email.textColor = .white
         email.clearsOnBeginEditing = true
         email.tintColor = .white
+        email.font = UIFont.systemFont(ofSize: 14)
         return email
     }()
 
@@ -29,6 +30,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         password.isSecureTextEntry = true
         password.textColor = .white
         password.tintColor = .white
+        password.font = UIFont.systemFont(ofSize: 14)
         return password
     }()
 
@@ -91,12 +93,19 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         return stackView
     }()
 
+    private lazy var signInStackView: UIStackView = {
+        let stackView = UIStackView(arrangedSubviews: [signInLabel,
+                                                       emailTextField,
+                                                       passwordTextField,
+                                                       ])
+        stackView.axis = .vertical
+        stackView.spacing = Constants.padding
+        return stackView
+    }()
 
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [UIView(),
-                                                       signInLabel,
-                                                       emailTextField,
-                                                       passwordTextField,
+                                                       signInStackView,
                                                        forgotPasswordStack,
                                                        UIView(),
                                                        signInButton,
@@ -125,10 +134,10 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         assignBackground()
         view.addSubview(stackView)
         setupConstraints()
-        animateUIView()
         setNavigationBar()
         setupUI()
-    }
+        animateUIView()
+        }
 
     private func setNavigationBar() {
         navigationItem.hidesBackButton = true
@@ -150,13 +159,15 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         emailTextField.keyboardType = UIKeyboardType.emailAddress
         emailTextField.addBottomBorder()
         passwordTextField.addBottomBorder()
-        signInButton.roundCorners()
+        signInButton.layer.cornerRadius = 28
     }
 
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
     }
+
+    //MARK: Animations
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -174,11 +185,13 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                        initialSpringVelocity: 1.0,
                        options: .curveEaseIn,
                        animations: {
-                        self.stackView.center = CGPoint(x: 200, y: 0)
-                        self.stackView.layoutIfNeeded()
+                        self.signInStackView.center = CGPoint(x: 200, y: 0)
+                        self.signInStackView.layoutIfNeeded()
                         },
             completion: nil)
     }
+
+    // MARK: Constraints
 
     private func setupStackViewConstraints() {
         stackView.subviews.forEach { $0.translatesAutoresizingMaskIntoConstraints = false }

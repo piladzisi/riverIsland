@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B51CB61E24FEB85D0051BD18 /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */; };
-		B51CB62024FEC6C60051BD18 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51CB61F24FEC6C60051BD18 /* UIButton+Extensions.swift */; };
 		B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7C24FD34C500477823 /* AppDelegate.swift */; };
 		B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7E24FD34C500477823 /* SceneDelegate.swift */; };
 		B5779F8124FD34C500477823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F8024FD34C500477823 /* ViewController.swift */; };
@@ -47,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
-		B51CB61F24FEC6C60051BD18 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		B5779F7924FD34C500477823 /* RiverIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5779F7C24FD34C500477823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5779F7E24FD34C500477823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +166,6 @@
 			children = (
 				B5779FB024FD388300477823 /* UIVIew+Extensions.swift */,
 				B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */,
-				B51CB61F24FEC6C60051BD18 /* UIButton+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B51CB61E24FEB85D0051BD18 /* ProductCellViewModel.swift in Sources */,
-				B51CB62024FEC6C60051BD18 /* UIButton+Extensions.swift in Sources */,
 				B57B837E24FD96660012AEB3 /* ProductCell.swift in Sources */,
 				B5779FBF24FD7B3A00477823 /* ProductsViewController.swift in Sources */,
 				B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */,
