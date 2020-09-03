@@ -9,6 +9,7 @@
 import UIKit
 
 import Foundation
+import Firebase
 
 class LoginScreen: UIViewController, UITextFieldDelegate {
 
@@ -62,7 +63,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.addBorder(color: .white, width: 2)
         button.titleLabel?.textColor = .white
-        button.addTarget(self, action: #selector(skipButtonAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signInAction), for: .touchUpInside)
         return button
     }()
 
@@ -73,6 +74,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.contentHorizontalAlignment = .right
         button.titleLabel?.textColor = .white
+        button.addTarget(self, action: #selector(signUpAction), for: .touchUpInside)
         return button
     }()
 
@@ -116,7 +118,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     }()
 
     private lazy var backgroundImage: UIView = {
-        let background = UIImage(named: "background_image")
+        let background = UIImage(named: "woman")
         let imageView = UIImageView()
         imageView.contentMode =  UIView.ContentMode.scaleAspectFill
         imageView.image = background
@@ -135,8 +137,8 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         view.addSubview(stackView)
         setupConstraints()
         setNavigationBar()
-        setupUI()
         animateUIView()
+        setupUI()
         }
 
     private func setNavigationBar() {
@@ -152,7 +154,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         navigationItem.rightBarButtonItem = rightButton
     }
 
-    //TODO: save email and password when entered
     private func setupUI() {
         passwordTextField.delegate = self
         emailTextField.delegate = self
@@ -179,14 +180,14 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     }
 
     private func animateUIView() {
-        UIView.animate(withDuration: 1.3,
+        UIView.animate(withDuration: 1.1,
                        delay: 0,
                        usingSpringWithDamping: 1.0,
                        initialSpringVelocity: 1.0,
                        options: .curveEaseIn,
                        animations: {
-                        self.signInStackView.center = CGPoint(x: 200, y: 0)
-                        self.signInStackView.layoutIfNeeded()
+                            self.signInStackView.center = CGPoint(x: 200, y: 100)
+                            self.signInStackView.layoutIfNeeded()
                         },
             completion: nil)
     }
@@ -211,20 +212,32 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         signInLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: height/3).isActive = true
     }
 
-    //TODO: separate email and password textfields
-    // Limit Password to 12 characters
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 12
-        let currentString: NSString = (passwordTextField.text ?? "") as NSString
-        let newString: NSString =
-            currentString.replacingCharacters(in: range, with: string) as NSString
-        return newString.length <= maxLength
-    }
-
     // MARK: - Button Actions
 
     @objc func skipButtonAction(sender: UIButton) {
         let mainVC = ProductsViewController()
         navigationController?.pushViewController(mainVC, animated: true)
+    }
+
+    @objc func signInAction(sender: UIButton) {
+
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                if let err = error {
+                    print(err.localizedDescription)
+                    //TODO: display alert with error message
+                } else {
+                    let mainVC = ProductsViewController()
+                    self.navigationController?.pushViewController(mainVC, animated: true)
+                }
+            }
+        }
+    }
+
+    @objc func signUpAction(sender: UIButton) {
+        let registerVC = RegisterScreen()
+        backgroundImage.fadeOut(0.1)
+        navigationController?.pushViewController(registerVC, animated: true)
+        UIView.transition(with: self.navigationController!.view, duration: 0.5, options: UIView.AnimationOptions.transitionFlipFromLeft, animations: nil, completion: nil)
     }
 }

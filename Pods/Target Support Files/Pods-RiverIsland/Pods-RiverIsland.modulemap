@@ -1,0 +1,6 @@
+framework module Pods_RiverIsland {
+  umbrella header "Pods-RiverIsland-umbrella.h"
+
+  export *
+  module * { export * }
+}

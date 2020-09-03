@@ -3,18 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65D8C1CE126ACCAC6D301F2F /* Pods_RiverIsland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */; };
 		B51CB61E24FEB85D0051BD18 /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */; };
 		B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7C24FD34C500477823 /* AppDelegate.swift */; };
 		B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7E24FD34C500477823 /* SceneDelegate.swift */; };
 		B5779F8124FD34C500477823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F8024FD34C500477823 /* ViewController.swift */; };
 		B5779F8424FD34C500477823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5779F8224FD34C500477823 /* Main.storyboard */; };
 		B5779F8924FD34C800477823 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5779F8724FD34C800477823 /* LaunchScreen.storyboard */; };
-		B5779F9424FD34C900477823 /* RiverIslandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F9324FD34C900477823 /* RiverIslandTests.swift */; };
-		B5779F9F24FD34C900477823 /* RiverIslandUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F9E24FD34C900477823 /* RiverIslandUITests.swift */; };
 		B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FAD24FD350D00477823 /* LoginScreen.swift */; };
 		B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779FB024FD388300477823 /* UIVIew+Extensions.swift */; };
 		B5779FB524FD415400477823 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5779FB424FD415400477823 /* Assets.xcassets */; };
@@ -25,40 +24,21 @@
 		B57B837E24FD96660012AEB3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B837C24FD96660012AEB3 /* ProductCell.swift */; };
 		B57B837F24FD96660012AEB3 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57B837D24FD96660012AEB3 /* ProductCell.xib */; };
 		B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B838124FD9DD40012AEB3 /* ImageViewController.swift */; };
+		B5915C45250174E9005F49DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5915C44250174E9005F49DD /* GoogleService-Info.plist */; };
+		B5915C4825018355005F49DD /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4725018354005F49DD /* RegisterScreen.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B5779F9024FD34C900477823 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5779F7124FD34C400477823 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5779F7824FD34C500477823;
-			remoteInfo = RiverIsland;
-		};
-		B5779F9B24FD34C900477823 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B5779F7124FD34C400477823 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B5779F7824FD34C500477823;
-			remoteInfo = RiverIsland;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0E0DA14F30209547B97B6F27 /* Pods-RiverIsland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.debug.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.debug.xcconfig"; sourceTree = "<group>"; };
+		AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverIsland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
-		B5779F7924FD34C500477823 /* RiverIsland.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiverIsland.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5779F7924FD34C500477823 /* River Island.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "River Island.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5779F7C24FD34C500477823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5779F7E24FD34C500477823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B5779F8024FD34C500477823 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5779F8324FD34C500477823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5779F8824FD34C800477823 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5779F8A24FD34C800477823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5779F8F24FD34C900477823 /* RiverIslandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverIslandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5779F9324FD34C900477823 /* RiverIslandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverIslandTests.swift; sourceTree = "<group>"; };
-		B5779F9524FD34C900477823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5779F9A24FD34C900477823 /* RiverIslandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiverIslandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5779F9E24FD34C900477823 /* RiverIslandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiverIslandUITests.swift; sourceTree = "<group>"; };
-		B5779FA024FD34C900477823 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5779FAD24FD350D00477823 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		B5779FB024FD388300477823 /* UIVIew+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIew+Extensions.swift"; sourceTree = "<group>"; };
 		B5779FB424FD415400477823 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,6 +49,9 @@
 		B57B837C24FD96660012AEB3 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B57B837D24FD96660012AEB3 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		B57B838124FD9DD40012AEB3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		B5915C44250174E9005F49DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B5915C4725018354005F49DD /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.release.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,42 +59,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5779F8C24FD34C900477823 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5779F9724FD34C900477823 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				65D8C1CE126ACCAC6D301F2F /* Pods_RiverIsland.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		467AA9B8E7B9B342A7BB7D19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E0DA14F30209547B97B6F27 /* Pods-RiverIsland.debug.xcconfig */,
+				ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A18217EA6F782E20043E5A27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B5779F7024FD34C400477823 = {
 			isa = PBXGroup;
 			children = (
 				B5779F7B24FD34C500477823 /* RiverIsland */,
-				B5779F9224FD34C900477823 /* RiverIslandTests */,
-				B5779F9D24FD34C900477823 /* RiverIslandUITests */,
 				B5779F7A24FD34C500477823 /* Products */,
+				467AA9B8E7B9B342A7BB7D19 /* Pods */,
+				A18217EA6F782E20043E5A27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		B5779F7A24FD34C500477823 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5779F7924FD34C500477823 /* RiverIsland.app */,
-				B5779F8F24FD34C900477823 /* RiverIslandTests.xctest */,
-				B5779F9A24FD34C900477823 /* RiverIslandUITests.xctest */,
+				B5779F7924FD34C500477823 /* River Island.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +107,7 @@
 				B5779FB824FD5CE500477823 /* Constants.swift */,
 				B57B838024FD9DA30012AEB3 /* ImageScreen */,
 				B5779FAF24FD387100477823 /* Extensions */,
+				B5915C4625018311005F49DD /* RegisterScreen */,
 				B5779FAC24FD34E500477823 /* LoginScreen */,
 				B5779FBC24FD7B1F00477823 /* MainScreen */,
 				B5779F7C24FD34C500477823 /* AppDelegate.swift */,
@@ -131,26 +117,9 @@
 				B5779FB424FD415400477823 /* Assets.xcassets */,
 				B5779F8224FD34C500477823 /* Main.storyboard */,
 				B5779F8A24FD34C800477823 /* Info.plist */,
+				B5915C44250174E9005F49DD /* GoogleService-Info.plist */,
 			);
 			path = RiverIsland;
-			sourceTree = "<group>";
-		};
-		B5779F9224FD34C900477823 /* RiverIslandTests */ = {
-			isa = PBXGroup;
-			children = (
-				B5779F9324FD34C900477823 /* RiverIslandTests.swift */,
-				B5779F9524FD34C900477823 /* Info.plist */,
-			);
-			path = RiverIslandTests;
-			sourceTree = "<group>";
-		};
-		B5779F9D24FD34C900477823 /* RiverIslandUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B5779F9E24FD34C900477823 /* RiverIslandUITests.swift */,
-				B5779FA024FD34C900477823 /* Info.plist */,
-			);
-			path = RiverIslandUITests;
 			sourceTree = "<group>";
 		};
 		B5779FAC24FD34E500477823 /* LoginScreen */ = {
@@ -190,6 +159,14 @@
 			path = ImageScreen;
 			sourceTree = "<group>";
 		};
+		B5915C4625018311005F49DD /* RegisterScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B5915C4725018354005F49DD /* RegisterScreen.swift */,
+			);
+			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -197,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5779FA324FD34C900477823 /* Build configuration list for PBXNativeTarget "RiverIsland" */;
 			buildPhases = (
+				4549E6E559DCD39DD9082C8C /* [CP] Check Pods Manifest.lock */,
 				B5779F7524FD34C500477823 /* Sources */,
 				B5779F7624FD34C500477823 /* Frameworks */,
 				B5779F7724FD34C500477823 /* Resources */,
+				5CA465F0B5DCDCC71D29F26A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -207,44 +186,8 @@
 			);
 			name = RiverIsland;
 			productName = RiverIsland;
-			productReference = B5779F7924FD34C500477823 /* RiverIsland.app */;
+			productReference = B5779F7924FD34C500477823 /* River Island.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B5779F8E24FD34C900477823 /* RiverIslandTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5779FA624FD34C900477823 /* Build configuration list for PBXNativeTarget "RiverIslandTests" */;
-			buildPhases = (
-				B5779F8B24FD34C900477823 /* Sources */,
-				B5779F8C24FD34C900477823 /* Frameworks */,
-				B5779F8D24FD34C900477823 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5779F9124FD34C900477823 /* PBXTargetDependency */,
-			);
-			name = RiverIslandTests;
-			productName = RiverIslandTests;
-			productReference = B5779F8F24FD34C900477823 /* RiverIslandTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		B5779F9924FD34C900477823 /* RiverIslandUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5779FA924FD34C900477823 /* Build configuration list for PBXNativeTarget "RiverIslandUITests" */;
-			buildPhases = (
-				B5779F9624FD34C900477823 /* Sources */,
-				B5779F9724FD34C900477823 /* Frameworks */,
-				B5779F9824FD34C900477823 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B5779F9C24FD34C900477823 /* PBXTargetDependency */,
-			);
-			name = RiverIslandUITests;
-			productName = RiverIslandUITests;
-			productReference = B5779F9A24FD34C900477823 /* RiverIslandUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -258,14 +201,6 @@
 				TargetAttributes = {
 					B5779F7824FD34C500477823 = {
 						CreatedOnToolsVersion = 11.6;
-					};
-					B5779F8E24FD34C900477823 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = B5779F7824FD34C500477823;
-					};
-					B5779F9924FD34C900477823 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = B5779F7824FD34C500477823;
 					};
 				};
 			};
@@ -283,8 +218,6 @@
 			projectRoot = "";
 			targets = (
 				B5779F7824FD34C500477823 /* RiverIsland */,
-				B5779F8E24FD34C900477823 /* RiverIslandTests */,
-				B5779F9924FD34C900477823 /* RiverIslandUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -299,30 +232,60 @@
 				B5779F8424FD34C500477823 /* Main.storyboard in Resources */,
 				B5779FC024FD7B3A00477823 /* ProductsViewController.xib in Resources */,
 				B57B837F24FD96660012AEB3 /* ProductCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5779F8D24FD34C900477823 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5779F9824FD34C900477823 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				B5915C45250174E9005F49DD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4549E6E559DCD39DD9082C8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RiverIsland-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA465F0B5DCDCC71D29F26A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RiverIsland/Pods-RiverIsland-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RiverIsland/Pods-RiverIsland-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RiverIsland/Pods-RiverIsland-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5779F7524FD34C500477823 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5915C4825018355005F49DD /* RegisterScreen.swift in Sources */,
 				B51CB61E24FEB85D0051BD18 /* ProductCellViewModel.swift in Sources */,
 				B57B837E24FD96660012AEB3 /* ProductCell.swift in Sources */,
 				B5779FBF24FD7B3A00477823 /* ProductsViewController.swift in Sources */,
@@ -337,36 +300,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5779F8B24FD34C900477823 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5779F9424FD34C900477823 /* RiverIslandTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5779F9624FD34C900477823 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5779F9F24FD34C900477823 /* RiverIslandUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B5779F9124FD34C900477823 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5779F7824FD34C500477823 /* RiverIsland */;
-			targetProxy = B5779F9024FD34C900477823 /* PBXContainerItemProxy */;
-		};
-		B5779F9C24FD34C900477823 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B5779F7824FD34C500477823 /* RiverIsland */;
-			targetProxy = B5779F9B24FD34C900477823 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B5779F8224FD34C500477823 /* Main.storyboard */ = {
@@ -504,6 +438,7 @@
 		};
 		B5779FA424FD34C900477823 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E0DA14F30209547B97B6F27 /* Pods-RiverIsland.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -513,7 +448,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaS.RiverIsland;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "River Island";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -521,6 +456,7 @@
 		};
 		B5779FA524FD34C900477823 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,89 +466,9 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaS.RiverIsland;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "River Island";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B5779FA724FD34C900477823 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RiverIslandTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaS.RiverIslandTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverIsland.app/RiverIsland";
-			};
-			name = Debug;
-		};
-		B5779FA824FD34C900477823 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RiverIslandTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaS.RiverIslandTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiverIsland.app/RiverIsland";
-			};
-			name = Release;
-		};
-		B5779FAA24FD34C900477823 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RiverIslandUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaS.RiverIslandUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RiverIsland;
-			};
-			name = Debug;
-		};
-		B5779FAB24FD34C900477823 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RiverIslandUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnnaS.RiverIslandUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = RiverIsland;
 			};
 			name = Release;
 		};
@@ -633,24 +489,6 @@
 			buildConfigurations = (
 				B5779FA424FD34C900477823 /* Debug */,
 				B5779FA524FD34C900477823 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5779FA624FD34C900477823 /* Build configuration list for PBXNativeTarget "RiverIslandTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5779FA724FD34C900477823 /* Debug */,
-				B5779FA824FD34C900477823 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5779FA924FD34C900477823 /* Build configuration list for PBXNativeTarget "RiverIslandUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5779FAA24FD34C900477823 /* Debug */,
-				B5779FAB24FD34C900477823 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
