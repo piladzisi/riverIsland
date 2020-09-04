@@ -8,17 +8,31 @@
 
 import UIKit
 
-class ProductsViewController: UIViewController {
+class ProductsViewController: UIViewController, NetworkManagerDelegate {
 
     private static let cellNib = ProductCell.identifier
     private static let cellReuseIdentifier = "productCellReuseIdentifier"
 
     @IBOutlet weak var tableView: UITableView!
 
+    var networkManager = NetworkManager()
+    private var productsData: ProductsData
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkManager.delegate = self
         setNavigationBar()
         setupTableView()
+        print(productsData.Products[1].name)
+    }
+
+    init(products: ProductsData) {
+        self.productsData = products
+        super.init(nibName: "ProductsViewController", bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func setNavigationBar() {
@@ -34,6 +48,10 @@ class ProductsViewController: UIViewController {
         tableView.dataSource = self
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
+    }
+
+    func didFetchData(products: ProductsData) {
+       print(productsData.Products[0].name)
     }
 }
 
@@ -53,9 +71,11 @@ extension ProductsViewController: UITableViewDataSource {
             withIdentifier: Self.cellReuseIdentifier) as? ProductCell else {
                 return UITableViewCell()
         }
-
-        //        let reviewCellModel = sections[indexPath.section][indexPath.row]
-        //        cell.displayInfo(of: reviewCellModel)
+        let productCellModel = productsData.Products[indexPath.row]
+        cell.nameLabel.text = productCellModel.name
+        cell.priceLabel.text = productCellModel.cost
+        cell.imageView?.image = UIImage(named: productCellModel.altImage)
+              //  cell.displayInfo(of: reviewCellModel)
         return cell
     }
 

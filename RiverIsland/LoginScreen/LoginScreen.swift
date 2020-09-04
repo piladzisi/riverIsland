@@ -11,7 +11,10 @@ import UIKit
 import Foundation
 import Firebase
 
-class LoginScreen: UIViewController, UITextFieldDelegate {
+class LoginScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate {
+
+    var networkManager = NetworkManager()
+    var productsData: ProductsData?
 
     private let emailTextField: UITextField = {
         let email = UITextField()
@@ -133,6 +136,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkManager.delegate = self
         assignBackground()
         view.addSubview(stackView)
         setupConstraints()
@@ -167,6 +171,11 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return true
     }
+
+    func didFetchData(products: ProductsData) {
+        productsData = products
+    }
+
 
     //MARK: Animations
 
@@ -215,7 +224,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
     // MARK: - Button Actions
 
     @objc func skipButtonAction(sender: UIButton) {
-        let mainVC = ProductsViewController()
+        networkManager.fetchProducts()
+        guard let productsData = self.productsData else { return }
+        let mainVC = ProductsViewController(products: productsData)
         navigationController?.pushViewController(mainVC, animated: true)
     }
 
@@ -227,7 +238,9 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                     print(err.localizedDescription)
                     //TODO: display alert with error message
                 } else {
-                    let mainVC = ProductsViewController()
+                    self.networkManager.fetchProducts()
+                    guard let productsData = self.productsData else { return }
+                    let mainVC = ProductsViewController(products: productsData)
                     self.navigationController?.pushViewController(mainVC, animated: true)
                 }
             }

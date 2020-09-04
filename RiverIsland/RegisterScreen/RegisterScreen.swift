@@ -11,7 +11,10 @@ import UIKit
 import Foundation
 import Firebase
 
-class RegisterScreen: UIViewController, UITextFieldDelegate {
+class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate {
+
+    var networkManager = NetworkManager()
+    var productsData: ProductsData?
 
     private let emailTextField: UITextField = {
         let email = UITextField()
@@ -118,6 +121,7 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        networkManager.delegate = self
         assignBackground()
         view.addSubview(stackView)
         setupConstraints()
@@ -151,6 +155,10 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
+    }
+
+    func didFetchData(products: ProductsData) {
+        productsData = products
     }
 
     //MARK: Animations
@@ -187,7 +195,9 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     // MARK: - Button Actions
 
     @objc func skipButtonAction(sender: UIButton) {
-        let mainVC = ProductsViewController()
+        networkManager.fetchProducts()
+        guard let productsData = self.productsData else { return }
+        let mainVC = ProductsViewController(products: productsData)
         navigationController?.pushViewController(mainVC, animated: true)
     }
 
@@ -199,7 +209,9 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
                     print(err.localizedDescription)
                     //TODO: display alert with error message
                 } else {
-                    let mainVC = ProductsViewController()
+                    self.networkManager.fetchProducts()
+                    guard let productsData = self.productsData else { return }
+                    let mainVC = ProductsViewController(products: productsData)
                     self.navigationController?.pushViewController(mainVC, animated: true)
                 }
             }

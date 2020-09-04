@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		65D8C1CE126ACCAC6D301F2F /* Pods_RiverIsland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */; };
-		B51CB61E24FEB85D0051BD18 /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */; };
 		B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7C24FD34C500477823 /* AppDelegate.swift */; };
 		B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7E24FD34C500477823 /* SceneDelegate.swift */; };
 		B5779F8124FD34C500477823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F8024FD34C500477823 /* ViewController.swift */; };
@@ -26,12 +25,14 @@
 		B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B838124FD9DD40012AEB3 /* ImageViewController.swift */; };
 		B5915C45250174E9005F49DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5915C44250174E9005F49DD /* GoogleService-Info.plist */; };
 		B5915C4825018355005F49DD /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4725018354005F49DD /* RegisterScreen.swift */; };
+		B5915C4B25019220005F49DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4A25019220005F49DD /* NetworkManager.swift */; };
+		B5915C4D25019853005F49DD /* ProductsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4C25019853005F49DD /* ProductsData.swift */; };
+		B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C5025019FF1005F49DD /* ProductModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E0DA14F30209547B97B6F27 /* Pods-RiverIsland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.debug.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.debug.xcconfig"; sourceTree = "<group>"; };
 		AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverIsland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
 		B5779F7924FD34C500477823 /* River Island.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "River Island.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5779F7C24FD34C500477823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5779F7E24FD34C500477823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +52,9 @@
 		B57B838124FD9DD40012AEB3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		B5915C44250174E9005F49DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5915C4725018354005F49DD /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
+		B5915C4A25019220005F49DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B5915C4C25019853005F49DD /* ProductsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsData.swift; sourceTree = "<group>"; };
+		B5915C5025019FF1005F49DD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.release.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 				B5915C4625018311005F49DD /* RegisterScreen */,
 				B5779FAC24FD34E500477823 /* LoginScreen */,
 				B5779FBC24FD7B1F00477823 /* MainScreen */,
+				B5915C492501920D005F49DD /* Model */,
 				B5779F7C24FD34C500477823 /* AppDelegate.swift */,
 				B5779F7E24FD34C500477823 /* SceneDelegate.swift */,
 				B5779F8024FD34C500477823 /* ViewController.swift */,
@@ -146,7 +151,6 @@
 				B5779FBE24FD7B3A00477823 /* ProductsViewController.xib */,
 				B57B837C24FD96660012AEB3 /* ProductCell.swift */,
 				B57B837D24FD96660012AEB3 /* ProductCell.xib */,
-				B51CB61D24FEB85D0051BD18 /* ProductCellViewModel.swift */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -165,6 +169,17 @@
 				B5915C4725018354005F49DD /* RegisterScreen.swift */,
 			);
 			path = RegisterScreen;
+			sourceTree = "<group>";
+		};
+		B5915C492501920D005F49DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5915C4A25019220005F49DD /* NetworkManager.swift */,
+				B5915C4C25019853005F49DD /* ProductsData.swift */,
+				B5915C5025019FF1005F49DD /* ProductModel.swift */,
+			);
+			name = Model;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,11 +301,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5915C4825018355005F49DD /* RegisterScreen.swift in Sources */,
-				B51CB61E24FEB85D0051BD18 /* ProductCellViewModel.swift in Sources */,
 				B57B837E24FD96660012AEB3 /* ProductCell.swift in Sources */,
+				B5915C4B25019220005F49DD /* NetworkManager.swift in Sources */,
 				B5779FBF24FD7B3A00477823 /* ProductsViewController.swift in Sources */,
 				B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */,
+				B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */,
 				B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */,
+				B5915C4D25019853005F49DD /* ProductsData.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
 				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,
 				B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */,
