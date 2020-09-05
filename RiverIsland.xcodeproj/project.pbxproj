@@ -28,6 +28,7 @@
 		B5915C4B25019220005F49DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4A25019220005F49DD /* NetworkManager.swift */; };
 		B5915C4D25019853005F49DD /* ProductsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4C25019853005F49DD /* ProductsData.swift */; };
 		B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C5025019FF1005F49DD /* ProductModel.swift */; };
+		B5C1403D2503BBDC00FBA67A /* ProductModelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		B5915C4A25019220005F49DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5915C4C25019853005F49DD /* ProductsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsData.swift; sourceTree = "<group>"; };
 		B5915C5025019FF1005F49DD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelCreator.swift; sourceTree = "<group>"; };
 		ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.release.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,13 +110,14 @@
 		B5779F7B24FD34C500477823 /* RiverIsland */ = {
 			isa = PBXGroup;
 			children = (
+				B5915C4A25019220005F49DD /* NetworkManager.swift */,
 				B5779FB824FD5CE500477823 /* Constants.swift */,
 				B57B838024FD9DA30012AEB3 /* ImageScreen */,
 				B5779FAF24FD387100477823 /* Extensions */,
 				B5915C4625018311005F49DD /* RegisterScreen */,
 				B5779FAC24FD34E500477823 /* LoginScreen */,
 				B5779FBC24FD7B1F00477823 /* MainScreen */,
-				B5915C492501920D005F49DD /* Model */,
+				B5915C492501920D005F49DD /* Models */,
 				B5779F7C24FD34C500477823 /* AppDelegate.swift */,
 				B5779F7E24FD34C500477823 /* SceneDelegate.swift */,
 				B5779F8024FD34C500477823 /* ViewController.swift */,
@@ -171,14 +174,14 @@
 			path = RegisterScreen;
 			sourceTree = "<group>";
 		};
-		B5915C492501920D005F49DD /* Model */ = {
+		B5915C492501920D005F49DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5915C4A25019220005F49DD /* NetworkManager.swift */,
 				B5915C4C25019853005F49DD /* ProductsData.swift */,
 				B5915C5025019FF1005F49DD /* ProductModel.swift */,
+				B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */,
 			);
-			name = Model;
+			name = Models;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -308,6 +311,7 @@
 				B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */,
 				B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */,
 				B5915C4D25019853005F49DD /* ProductsData.swift in Sources */,
+				B5C1403D2503BBDC00FBA67A /* ProductModelCreator.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
 				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,
 				B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */,

@@ -15,5 +15,5 @@ struct ProductsData: Decodable {
 struct Product: Decodable {
     let name: String
     let cost: String
-    let altImage: String
+    let prodid: String
 }

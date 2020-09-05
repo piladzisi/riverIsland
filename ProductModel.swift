@@ -7,9 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
-struct ProductModel {
-    let name: String
-    let price: String
-    let image: String
+class ProductModel {
+    var name: String
+    var price: String
+    var image: UIImage
+
+    init(name: String, price: String, image: UIImage) {
+        self.name = name
+        self.price = price
+        self.image = image
+    }
 }
+
+

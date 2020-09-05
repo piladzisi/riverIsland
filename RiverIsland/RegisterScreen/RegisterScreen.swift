@@ -11,10 +11,7 @@ import UIKit
 import Foundation
 import Firebase
 
-class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate {
-
-    var networkManager = NetworkManager()
-    var productsData: ProductsData?
+class RegisterScreen: UIViewController {
 
     private let emailTextField: UITextField = {
         let email = UITextField()
@@ -121,7 +118,6 @@ class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkManager.delegate = self
         assignBackground()
         view.addSubview(stackView)
         setupConstraints()
@@ -144,8 +140,6 @@ class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDeleg
     }
 
     private func setupUI() {
-        passwordTextField.delegate = self
-        emailTextField.delegate = self
         emailTextField.keyboardType = UIKeyboardType.emailAddress
         emailTextField.addBottomBorder()
         passwordTextField.addBottomBorder()
@@ -155,10 +149,6 @@ class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDeleg
     func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
-    }
-
-    func didFetchData(products: ProductsData) {
-        productsData = products
     }
 
     //MARK: Animations
@@ -195,9 +185,7 @@ class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDeleg
     // MARK: - Button Actions
 
     @objc func skipButtonAction(sender: UIButton) {
-        networkManager.fetchProducts()
-        guard let productsData = self.productsData else { return }
-        let mainVC = ProductsViewController(products: productsData)
+        let mainVC = ProductsViewController()
         navigationController?.pushViewController(mainVC, animated: true)
     }
 
@@ -209,9 +197,8 @@ class RegisterScreen: UIViewController, UITextFieldDelegate, NetworkManagerDeleg
                     print(err.localizedDescription)
                     //TODO: display alert with error message
                 } else {
-                    self.networkManager.fetchProducts()
-                    guard let productsData = self.productsData else { return }
-                    let mainVC = ProductsViewController(products: productsData)
+
+                    let mainVC = ProductsViewController()
                     self.navigationController?.pushViewController(mainVC, animated: true)
                 }
             }

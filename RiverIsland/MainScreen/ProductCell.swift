@@ -15,17 +15,32 @@ class ProductCell: UITableViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-
+    @IBOutlet weak var trendingLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        //It should be a list view showing Name, Image and Price
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
 
-        // Configure the view for the selected state
+    func getSymbol(forCurrencyCode code: String) -> String? {
+        let locale = NSLocale(localeIdentifier: code)
+        return locale.displayName(forKey: NSLocale.Key.currencySymbol, value: code)
+    }
+
+
+    func displayInfo(of model: ProductModel) {
+        self.cellImageView.image = model.image
+        self.nameLabel.text = model.name
+        if let currency = getSymbol(forCurrencyCode: "GBP") {
+            self.priceLabel.text = "\(currency)\(model.price)"
+        } else {
+            self.priceLabel.text = model.price
+        }
+
+        self.trendingLabel.text = "trending".uppercased()
     }
     
 }

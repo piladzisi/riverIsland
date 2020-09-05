@@ -11,10 +11,7 @@ import UIKit
 import Foundation
 import Firebase
 
-class LoginScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate {
-
-    var networkManager = NetworkManager()
-    var productsData: ProductsData?
+class LoginScreen: UIViewController, UITextFieldDelegate {
 
     private let emailTextField: UITextField = {
         let email = UITextField()
@@ -136,13 +133,13 @@ class LoginScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkManager.delegate = self
         assignBackground()
         view.addSubview(stackView)
         setupConstraints()
         setNavigationBar()
         animateUIView()
         setupUI()
+        
         }
 
     private func setNavigationBar() {
@@ -171,11 +168,6 @@ class LoginScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate
         self.view.endEditing(true)
         return true
     }
-
-    func didFetchData(products: ProductsData) {
-        productsData = products
-    }
-
 
     //MARK: Animations
 
@@ -224,9 +216,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate
     // MARK: - Button Actions
 
     @objc func skipButtonAction(sender: UIButton) {
-        networkManager.fetchProducts()
-        guard let productsData = self.productsData else { return }
-        let mainVC = ProductsViewController(products: productsData)
+        let mainVC = ProductsViewController()
         navigationController?.pushViewController(mainVC, animated: true)
     }
 
@@ -238,9 +228,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate, NetworkManagerDelegate
                     print(err.localizedDescription)
                     //TODO: display alert with error message
                 } else {
-                    self.networkManager.fetchProducts()
-                    guard let productsData = self.productsData else { return }
-                    let mainVC = ProductsViewController(products: productsData)
+                    let mainVC = ProductsViewController()
                     self.navigationController?.pushViewController(mainVC, animated: true)
                 }
             }
