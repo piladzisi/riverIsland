@@ -13,7 +13,18 @@ class ImageViewController: UIViewController {
 
     override func viewDidLoad() {
     super.viewDidLoad()
-        view.backgroundColor = .yellow
+        view.backgroundColor = .white
+        let backBarButton = UIBarButtonItem(title: "",
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(backButtonTapped))
+        backBarButton.image = UIImage(named: "arrow")
+        navigationItem.leftBarButtonItem = backBarButton
+    }
+
+    @objc
+    private func backButtonTapped() {
+        navigationController?.popViewController(animated: true)
     }
 
     //https://static-ri.ristack-3.nn4maws.net/v1/plp/en_gb/2506/products.json

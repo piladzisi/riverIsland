@@ -26,6 +26,7 @@ struct Constants {
         static let register = "Register"
         static let dontHaveAccount = "Don't have and account?"
         static let haveAccount = "Already have an account?"
+        static let products = "Products"
     }
     enum Button {
         static let skip = "Skip"

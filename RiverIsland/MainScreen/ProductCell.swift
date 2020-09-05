@@ -21,6 +21,11 @@ class ProductCell: UITableViewCell {
         super.awakeFromNib()
     }
 
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12, left: 0, bottom: 20, right: 0))
+    }
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
@@ -42,5 +47,4 @@ class ProductCell: UITableViewCell {
 
         self.trendingLabel.text = "trending".uppercased()
     }
-    
 }

@@ -46,7 +46,17 @@ class ProductsViewController: UIViewController{
     }
 
     private func setNavigationBar() {
-        self.navigationController?.navigationBar.tintColor = .black
+        navigationItem.title = Constants.Strings.products
+        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.titleTextAttributes = [
+            .font: UIFont(name: "HelveticaNeue", size: 16),
+        ]
+        let backBarButton = UIBarButtonItem(title: "",
+                                            style: .plain,
+                                            target: self,
+                                            action: #selector(backButtonTapped))
+        backBarButton.image = UIImage(named: "arrow")
+        navigationItem.leftBarButtonItem = backBarButton
     }
 
     private func setupTableView() {
@@ -54,12 +64,18 @@ class ProductsViewController: UIViewController{
                            forCellReuseIdentifier: Self.cellReuseIdentifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableHeaderView = UIView()
         tableView.showsHorizontalScrollIndicator = false
         tableView.showsVerticalScrollIndicator = false
     }
 
     var isPaginating = false
     var isDonePaginating = false
+
+    @objc
+    private func backButtonTapped() {
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 // MARK: UITableViewDataSource
@@ -69,11 +85,15 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         products.count
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: Self.cellReuseIdentifier) as? ProductCell else {
                 return UITableViewCell()
+        }
+        if indexPath.row == 0 {
+            DispatchQueue.main.async {
+            cell.removeSectionSeparators()
+            }
         }
 
         let productCellModel = productModels[indexPath.row]
