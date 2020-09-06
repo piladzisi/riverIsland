@@ -16,7 +16,7 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     private let emailTextField: UITextField = {
         let email = UITextField()
         email.attributedPlaceholder = NSAttributedString(string: Constants.Strings.email,
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         email.textColor = .white
         email.tintColor = .white
         email.font = UIFont.systemFont(ofSize: 14)
@@ -148,16 +148,26 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
         registerButton.layer.cornerRadius = 28
     }
 
-    // MARK - TextField
+    // MARK:  TextField
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case emailTextField:
             passwordTextField.becomeFirstResponder()
+            passwordTextField.text?.removeAll()
         default:
             passwordTextField.resignFirstResponder()
         }
         return true
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case passwordTextField:
+            passwordTextField.text?.removeAll()
+        default:
+            return
+        }
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {

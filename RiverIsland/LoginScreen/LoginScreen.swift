@@ -48,7 +48,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.contentHorizontalAlignment = .right
         button.titleLabel?.textColor = .white
-         button.addTarget(self, action: #selector(forgotPasswordAction), for: .touchUpInside)
+        button.addTarget(self, action: #selector(forgotPasswordAction), for: .touchUpInside)
         return button
     }()
 
@@ -99,7 +99,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         let stackView = UIStackView(arrangedSubviews: [signInLabel,
                                                        emailTextField,
                                                        passwordTextField,
-                                                       ])
+        ])
         stackView.axis = .vertical
         stackView.spacing = Constants.padding
         return stackView
@@ -143,7 +143,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         passwordTextField.delegate = self
         setupUI()
         
-        }
+    }
 
     private func setNavigationBar() {
         navigationItem.hidesBackButton = true
@@ -167,16 +167,25 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         signInButton.layer.cornerRadius = 28
     }
 
-    // MARK - TextField
+    // MARK: - TextField
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         switch textField {
         case emailTextField:
             passwordTextField.becomeFirstResponder()
+            passwordTextField.text?.removeAll()
         default:
             passwordTextField.resignFirstResponder()
         }
         return true
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch textField {
+        case passwordTextField:
+            passwordTextField.text?.removeAll()
+        default:
+            return
+        }
     }
 
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
@@ -212,10 +221,10 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
                        initialSpringVelocity: 1.0,
                        options: .curveEaseIn,
                        animations: {
-                            self.signInStackView.center = CGPoint(x: 200, y: 100)
-                            self.signInStackView.layoutIfNeeded()
-                        },
-            completion: nil)
+                        self.signInStackView.center = CGPoint(x: 200, y: 100)
+                        self.signInStackView.layoutIfNeeded()
+        },
+                       completion: nil)
     }
 
     // MARK: Constraints
