@@ -49,7 +49,7 @@ class ProductsViewController: UIViewController{
         navigationItem.title = Constants.Strings.products
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [
-            .font: UIFont(name: "HelveticaNeue", size: 16) ?? UIFont.systemFont(ofSize: 16.0),
+            .font: UIFont(name: "HelveticaNeue-Bold", size: 16) ?? UIFont.systemFont(ofSize: 16.0),
         ]
         let backBarButton = UIBarButtonItem(title: "",
                                             style: .plain,
