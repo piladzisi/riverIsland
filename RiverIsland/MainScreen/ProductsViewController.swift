@@ -24,15 +24,15 @@ class ProductsViewController: UIViewController{
         fetchData()
     }
 
-
     private func fetchData() {
         let productsUrl = "https://static-ri.ristack-3.nn4maws.net/v1/plp/en_gb/2506/products.json"
-
         NetworkManager.shared.fetchGenericJSONData(urlString: productsUrl) { (result: ProductsData?, error) in
+
             if let error = error {
                 print("Failed to load data:", error)
                 return
             }
+
             self.products = result?.Products ?? []
             DispatchQueue.main.async {
                 self.createProductModels()
@@ -49,7 +49,7 @@ class ProductsViewController: UIViewController{
         navigationItem.title = Constants.Strings.products
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.titleTextAttributes = [
-            .font: UIFont(name: "HelveticaNeue", size: 16),
+            .font: UIFont(name: "HelveticaNeue", size: 16) ?? UIFont.systemFont(ofSize: 16.0),
         ]
         let backBarButton = UIBarButtonItem(title: "",
                                             style: .plain,
