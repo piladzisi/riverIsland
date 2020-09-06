@@ -30,7 +30,7 @@ class ProductCell: UITableViewCell {
     }
 
     func configure() {
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12, left: 5, bottom: 20, right: 0))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12, left: 0, bottom: 20, right: 0))
     }
 
     override func prepareForReuse() {
@@ -86,7 +86,7 @@ class ProductCell: UITableViewCell {
             trendingLabel.backgroundColor = .black
             trendingLabel.textColor = .white
             trendingLabel.textAlignment = .center
-        } else if product.category == "Dresses" {
+        } else if product.category == "Tops" {
             trendingLabel.text = "sale".uppercased()
             trendingLabel.backgroundColor = .white
             trendingLabel.textColor = .red

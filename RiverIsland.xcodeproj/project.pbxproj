@@ -29,7 +29,6 @@
 		B5915C4D25019853005F49DD /* ProductsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4C25019853005F49DD /* ProductsData.swift */; };
 		B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C5025019FF1005F49DD /* ProductModel.swift */; };
 		B5C1403D2503BBDC00FBA67A /* ProductModelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */; };
-		B5C1404925043E3D00FBA67A /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1404825043E3D00FBA67A /* UITableViewCell+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +57,6 @@
 		B5915C4C25019853005F49DD /* ProductsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsData.swift; sourceTree = "<group>"; };
 		B5915C5025019FF1005F49DD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelCreator.swift; sourceTree = "<group>"; };
-		B5C1404825043E3D00FBA67A /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.release.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +143,6 @@
 			children = (
 				B5779FB024FD388300477823 /* UIVIew+Extensions.swift */,
 				B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */,
-				B5C1404825043E3D00FBA67A /* UITableViewCell+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,7 +317,6 @@
 				B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */,
 				B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */,
 				B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */,
-				B5C1404925043E3D00FBA67A /* UITableViewCell+Extensions.swift in Sources */,
 				B5779FB924FD5CE500477823 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

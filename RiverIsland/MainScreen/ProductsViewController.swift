@@ -69,9 +69,6 @@ class ProductsViewController: UIViewController{
         tableView.showsVerticalScrollIndicator = false
     }
 
-    var isPaginating = false
-    var isDonePaginating = false
-
     @objc
     private func backButtonTapped() {
         navigationController?.popViewController(animated: true)
@@ -85,15 +82,14 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         products.count
     }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: Self.cellReuseIdentifier) as? ProductCell else {
                 return UITableViewCell()
-        }
-        if indexPath.row == 0 {
-            DispatchQueue.main.async {
-                cell.removeSectionSeparators()
-            }
         }
 
         let productCellModel = productModels[indexPath.row]
