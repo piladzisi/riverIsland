@@ -113,6 +113,7 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
 
     func assignBackground() {
         view.addSubview(backgroundImage)
+        backgroundImage.fillSuperview()
         self.view.sendSubviewToBack(backgroundImage)
     }
 
@@ -168,6 +169,10 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        backgroundImage.fadeOut(0.2)
     }
 
     // MARK: Constraints

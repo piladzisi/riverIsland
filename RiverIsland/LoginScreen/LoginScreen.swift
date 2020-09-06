@@ -129,6 +129,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     func assignBackground() {
         view.addSubview(backgroundImage)
+        backgroundImage.fillSuperview()
         self.view.sendSubviewToBack(backgroundImage)
     }
 
@@ -188,6 +189,10 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        backgroundImage.fadeOut(0.2)
     }
 
     private func animateUIView() {
