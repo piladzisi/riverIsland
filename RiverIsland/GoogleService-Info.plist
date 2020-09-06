@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>622187587275-uf2sd6tbqo5mepojj1vhngcorh116l18.apps.googleusercontent.com</string>
+	<string>622187587275-01q7a1iis3kc6129q7s0d9ml39h65nm2.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.622187587275-uf2sd6tbqo5mepojj1vhngcorh116l18</string>
+	<string>com.googleusercontent.apps.622187587275-01q7a1iis3kc6129q7s0d9ml39h65nm2</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBvf-RSiw5Du7cnDcUBRAQXX2YahApzr8M</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.AnnaS.RiverIsland</string>
+	<string>com.annasteel.RiverIsland</string>
 	<key>PROJECT_ID</key>
 	<string>river-island-b12bf</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:622187587275:ios:1afc5631c17b7f4c30dd4e</string>
+	<string>1:622187587275:ios:2f06c74d9573e6e030dd4e</string>
 	<key>DATABASE_URL</key>
 	<string>https://river-island-b12bf.firebaseio.com</string>
 </dict>

@@ -49,6 +49,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 12)
         button.contentHorizontalAlignment = .right
         button.titleLabel?.textColor = .white
+         button.addTarget(self, action: #selector(forgotPasswordAction), for: .touchUpInside)
         return button
     }()
 
@@ -224,12 +225,19 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
 
     // MARK: - Button Actions
 
-    @objc func skipButtonAction(sender: UIButton) {
+    @objc
+    func skipButtonAction(sender: UIButton) {
         let mainVC = ProductsViewController()
         navigationController?.pushViewController(mainVC, animated: true)
     }
 
-    @objc func signInAction(sender: UIButton) {
+    @objc
+    func forgotPasswordAction(sender: UIButton) {
+        presentAlert(title: "Reset Password", message: "Please check your email to reset password")
+    }
+
+    @objc
+    func signInAction(sender: UIButton) {
 
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in

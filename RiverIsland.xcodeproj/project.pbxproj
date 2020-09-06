@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65D8C1CE126ACCAC6D301F2F /* Pods_RiverIsland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */; };
+		B56DD5242505529C0099FF63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56DD5232505529C0099FF63 /* GoogleService-Info.plist */; };
 		B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7C24FD34C500477823 /* AppDelegate.swift */; };
 		B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7E24FD34C500477823 /* SceneDelegate.swift */; };
 		B5779F8124FD34C500477823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F8024FD34C500477823 /* ViewController.swift */; };
@@ -23,7 +24,6 @@
 		B57B837E24FD96660012AEB3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B837C24FD96660012AEB3 /* ProductCell.swift */; };
 		B57B837F24FD96660012AEB3 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57B837D24FD96660012AEB3 /* ProductCell.xib */; };
 		B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B838124FD9DD40012AEB3 /* ImageViewController.swift */; };
-		B5915C45250174E9005F49DD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5915C44250174E9005F49DD /* GoogleService-Info.plist */; };
 		B5915C4825018355005F49DD /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4725018354005F49DD /* RegisterScreen.swift */; };
 		B5915C4B25019220005F49DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4A25019220005F49DD /* NetworkManager.swift */; };
 		B5915C4D25019853005F49DD /* ProductsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4C25019853005F49DD /* ProductsData.swift */; };
@@ -35,6 +35,7 @@
 /* Begin PBXFileReference section */
 		0E0DA14F30209547B97B6F27 /* Pods-RiverIsland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.debug.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.debug.xcconfig"; sourceTree = "<group>"; };
 		AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverIsland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56DD5232505529C0099FF63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5779F7924FD34C500477823 /* River Island.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "River Island.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5779F7C24FD34C500477823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5779F7E24FD34C500477823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		B57B837C24FD96660012AEB3 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		B57B837D24FD96660012AEB3 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		B57B838124FD9DD40012AEB3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
-		B5915C44250174E9005F49DD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B5915C4725018354005F49DD /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B5915C4A25019220005F49DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B5915C4C25019853005F49DD /* ProductsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsData.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 				B5779FB424FD415400477823 /* Assets.xcassets */,
 				B5779F8224FD34C500477823 /* Main.storyboard */,
 				B5779F8A24FD34C800477823 /* Info.plist */,
-				B5915C44250174E9005F49DD /* GoogleService-Info.plist */,
+				B56DD5232505529C0099FF63 /* GoogleService-Info.plist */,
 			);
 			path = RiverIsland;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 				B5779F8424FD34C500477823 /* Main.storyboard in Resources */,
 				B5779FC024FD7B3A00477823 /* ProductsViewController.xib in Resources */,
 				B57B837F24FD96660012AEB3 /* ProductCell.xib in Resources */,
-				B5915C45250174E9005F49DD /* GoogleService-Info.plist in Resources */,
+				B56DD5242505529C0099FF63 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
