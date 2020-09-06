@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		65D8C1CE126ACCAC6D301F2F /* Pods_RiverIsland.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */; };
+		B56DD51E250504C30099FF63 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56DD51D250504C30099FF63 /* UIImageView+Extensions.swift */; };
 		B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7C24FD34C500477823 /* AppDelegate.swift */; };
 		B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F7E24FD34C500477823 /* SceneDelegate.swift */; };
 		B5779F8124FD34C500477823 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5779F8024FD34C500477823 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		0E0DA14F30209547B97B6F27 /* Pods-RiverIsland.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.debug.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.debug.xcconfig"; sourceTree = "<group>"; };
 		AED160BDBE660DBA66AF57D4 /* Pods_RiverIsland.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiverIsland.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56DD51D250504C30099FF63 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		B5779F7924FD34C500477823 /* River Island.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "River Island.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5779F7C24FD34C500477823 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5779F7E24FD34C500477823 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				B5779FB024FD388300477823 /* UIVIew+Extensions.swift */,
 				B57B837A24FD93C90012AEB3 /* UITextField+Extensions.swift */,
 				B5C1404825043E3D00FBA67A /* UITableViewCell+Extensions.swift */,
+				B56DD51D250504C30099FF63 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				B5C1403D2503BBDC00FBA67A /* ProductModelCreator.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
 				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,
+				B56DD51E250504C30099FF63 /* UIImageView+Extensions.swift in Sources */,
 				B5779FAE24FD350D00477823 /* LoginScreen.swift in Sources */,
 				B5779F7D24FD34C500477823 /* AppDelegate.swift in Sources */,
 				B5779F7F24FD34C500477823 /* SceneDelegate.swift in Sources */,

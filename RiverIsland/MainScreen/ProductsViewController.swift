@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 class ProductsViewController: UIViewController{
 
@@ -98,37 +97,7 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         }
 
         let productCellModel = productModels[indexPath.row]
-        cell.displayInfo(of: productCellModel)
-        let imageURL = URL(string: "https://riverisland.scene7.com/is/image/RiverIsland/\(products[indexPath.row].prodid)_main")
-        cell.cellImageView.sd_setImage(with: imageURL)
-
-        // initiate pagination
-        if indexPath.item == productModels.count - 1 && !isPaginating {
-            print("fetch more data")
-
-            isPaginating = true
-//
-//            let urlString = "https://itunes.apple.com/search?term=\(searchTerm)&offset=\(results.count)&limit=20"
-//            Service.shared.fetchGenericJSONData(urlString: urlString) { (searchResult: ProductsData?, err) in
-//
-//                if let err = err {
-//                    print("Failed to paginate data:", err)
-//                    return
-//                }
-//
-//                if searchResult?.results.count == 0 {
-//                    self.isDonePaginating = true
-//                }
-//
-//                sleep(2)
-//
-//                self.results += searchResult?.results ?? []
-//                DispatchQueue.main.async {
-//                    self.tableView.reloadData()
-//                }
-//                self.isPaginating = false
-           // }
-        }
+        cell.displayInfo(of: productCellModel, prodid: products[indexPath.row].prodid)
         return cell
     }
 
@@ -139,25 +108,9 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
                         let destinationViewController = ImageViewController(image: image)
                         navigationController?.pushViewController(destinationViewController, animated: true)
                     } else {
-                        print("no image")
+                        let destinationViewController = ImageViewController(image: UIImage(named: "logo")!)
+                        navigationController?.pushViewController(destinationViewController, animated: true)
                     }
-        guard let image = cell.cellImageView.image else { return }
-        let destinationViewController = ImageViewController(image: image)
-
     }
-
-    //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    //        //if such cell exists and destination controller (the one to show) exists too..
-    //        if let subjectCell = tableView.cellForRowAtIndexPath(indexPath as IndexPath),
-    //            let destinationViewController = ImageViewController()
-    //            if let text = subjectCell.textLabel?.text {
-    //                destinationViewController.textToShow = text
-    //            } else {
-    //                destinationViewController.textToShow = "Tapped Cell's textLabel is empty"
-    //            }
-    //            //Then just push the controller into the view hierarchy
-    //            navigationController?.pushViewController(destinationViewController, animated: true)
-    //        }
-    //    }
 }
 

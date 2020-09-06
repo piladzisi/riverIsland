@@ -79,6 +79,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellBanner" destination="V2z-yB-2MD" id="qdW-I1-Ety"/>
                 <outlet property="cellImageView" destination="PyH-Sg-XVV" id="uc9-gg-uTb"/>
                 <outlet property="nameLabel" destination="Yy1-7P-xFN" id="hSJ-U0-2Lv"/>
                 <outlet property="priceLabel" destination="XAF-bX-kbr" id="PHL-Aa-LNG"/>

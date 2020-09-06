@@ -19,65 +19,21 @@ extension UIView {
         }
     }
 
-    @discardableResult
-    func anchor(top: NSLayoutYAxisAnchor?,
-                leading: NSLayoutXAxisAnchor?,
-                bottom: NSLayoutYAxisAnchor?,
-                trailing: NSLayoutXAxisAnchor?,
-                padding: UIEdgeInsets = .zero,
-                size: CGSize = .zero) -> AnchoredConstraints {
-        translatesAutoresizingMaskIntoConstraints = false
-        var anchoredConstraints = AnchoredConstraints()
-
-        if let top = top {
-            anchoredConstraints.top = topAnchor.constraint(equalTo: top, constant: padding.top)
-        }
-
-        if let leading = leading {
-            anchoredConstraints.leading = leadingAnchor.constraint(equalTo: leading, constant: padding.left)
-        }
-
-        if let bottom = bottom {
-            anchoredConstraints.bottom = bottomAnchor.constraint(equalTo: bottom, constant: -padding.bottom)
-        }
-
-        if let trailing = trailing {
-            anchoredConstraints.trailing = trailingAnchor.constraint(equalTo: trailing, constant: -padding.right)
-        }
-
-        if size.width != 0 {
-            anchoredConstraints.width = widthAnchor.constraint(equalToConstant: size.width)
-        }
-
-        if size.height != 0 {
-            anchoredConstraints.height = heightAnchor.constraint(equalToConstant: size.height)
-        }
-
-        [anchoredConstraints.top,
-         anchoredConstraints.leading,
-         anchoredConstraints.bottom,
-         anchoredConstraints.trailing,
-         anchoredConstraints.width,
-         anchoredConstraints.height].forEach { $0?.isActive = true }
-
-        return anchoredConstraints
-    }
-
-        func fadeTo(_ alpha: CGFloat, duration: TimeInterval = 0.3) {
-            DispatchQueue.main.async {
-                UIView.animate(withDuration: duration) {
-                    self.alpha = alpha
-                }
+    func fadeTo(_ alpha: CGFloat, duration: TimeInterval = 0.3) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: duration) {
+                self.alpha = alpha
             }
         }
+    }
 
     func fadeIn(_ duration: TimeInterval, alpha: CGFloat) {
         fadeTo(alpha, duration: duration)
-        }
+    }
 
-        func fadeOut(_ duration: TimeInterval = 0.3) {
-            fadeTo(0.0, duration: duration)
-        }
+    func fadeOut(_ duration: TimeInterval = 0.3) {
+        fadeTo(0.0, duration: duration)
+    }
 
     func fillSuperview(padding: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
@@ -124,14 +80,5 @@ extension UIView {
         layer.masksToBounds = true
         layer.borderWidth = width
         layer.borderColor = color.cgColor
-    }
-
-    /// Pins view to parent view edges
-    /// - Parameter parentView: Parent view
-    func pinViewToParentViewEdges(parentView: UIView, constant: CGFloat = 0) {
-        topAnchor.constraint(equalTo: parentView.topAnchor, constant: constant).isActive = true
-        bottomAnchor.constraint(equalTo: parentView.bottomAnchor, constant: constant).isActive = true
-        leadingAnchor.constraint(equalTo: parentView.leadingAnchor, constant: constant).isActive = true
-        rightAnchor.constraint(equalTo: parentView.rightAnchor, constant: constant).isActive = true
     }
 }

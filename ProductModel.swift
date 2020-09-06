@@ -12,6 +12,7 @@ import UIKit
 class ProductModel {
     var name: String
     var price: String
+    var url = "https://riverisland.scene7.com/is/image/RiverIsland/"
 
     init(name: String, price: String) {
         self.name = name
