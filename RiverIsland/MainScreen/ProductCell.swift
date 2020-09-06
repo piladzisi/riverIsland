@@ -23,7 +23,7 @@ class ProductCell: UITableViewCell {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12, left: 0, bottom: 20, right: 0))
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 12, left: 5, bottom: 20, right: 0))
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -37,7 +37,6 @@ class ProductCell: UITableViewCell {
 
 
     func displayInfo(of model: ProductModel) {
-        self.cellImageView.image = model.image
         self.nameLabel.text = model.name
         if let currency = getSymbol(forCurrencyCode: "GBP") {
             self.priceLabel.text = "\(currency)\(model.price)"

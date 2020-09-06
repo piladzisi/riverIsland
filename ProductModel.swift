@@ -12,12 +12,10 @@ import UIKit
 class ProductModel {
     var name: String
     var price: String
-    var image: UIImage
 
-    init(name: String, price: String, image: UIImage) {
+    init(name: String, price: String) {
         self.name = name
         self.price = price
-        self.image = image
     }
 }
 

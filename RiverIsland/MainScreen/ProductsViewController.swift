@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProductsViewController: UIViewController{
 
@@ -98,6 +99,8 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
 
         let productCellModel = productModels[indexPath.row]
         cell.displayInfo(of: productCellModel)
+        let imageURL = URL(string: "https://riverisland.scene7.com/is/image/RiverIsland/\(products[indexPath.row].prodid)_main")
+        cell.cellImageView.sd_setImage(with: imageURL)
 
         // initiate pagination
         if indexPath.item == productModels.count - 1 && !isPaginating {
@@ -130,10 +133,17 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: Self.cellReuseIdentifier) as? ProductCell else { return }
-        let destinationViewController = ImageViewController()
-        navigationController?.pushViewController(destinationViewController, animated: true)
+        guard let cell = tableView.cellForRow(
+            at: indexPath) as? ProductCell else { return }
+                    if let image = cell.cellImageView.image {
+                        let destinationViewController = ImageViewController(image: image)
+                        navigationController?.pushViewController(destinationViewController, animated: true)
+                    } else {
+                        print("no image")
+                    }
+        guard let image = cell.cellImageView.image else { return }
+        let destinationViewController = ImageViewController(image: image)
+
     }
 
     //    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

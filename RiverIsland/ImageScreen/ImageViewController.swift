@@ -11,8 +11,16 @@ import UIKit
 
 class ImageViewController: UIViewController {
 
+    let selectedImage: UIImage
+ 
+    private let imageView: UIImageView =  {
+        let image = UIImageView()
+        image.contentMode = UIView.ContentMode.scaleAspectFit
+        return image
+    }()
+
     override func viewDidLoad() {
-    super.viewDidLoad()
+        super.viewDidLoad()
         view.backgroundColor = .white
         let backBarButton = UIBarButtonItem(title: "",
                                             style: .plain,
@@ -20,12 +28,22 @@ class ImageViewController: UIViewController {
                                             action: #selector(backButtonTapped))
         backBarButton.image = UIImage(named: "arrow")
         navigationItem.leftBarButtonItem = backBarButton
+        view.addSubview(imageView)
+        imageView.fillSuperview()
+        imageView.image = selectedImage
+    }
+
+    init(image: UIImage) {
+        self.selectedImage = image
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     @objc
     private func backButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
-
-    //https://static-ri.ristack-3.nn4maws.net/v1/plp/en_gb/2506/products.json
 }
