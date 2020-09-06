@@ -15,7 +15,7 @@ class ImageViewController: UIViewController {
  
     private let imageView: UIImageView =  {
         let image = UIImageView()
-        image.contentMode = UIView.ContentMode.scaleAspectFit
+        image.contentMode = UIView.ContentMode.scaleAspectFill
         return image
     }()
 
@@ -40,6 +40,9 @@ class ImageViewController: UIViewController {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        imageView.fadeOut(0.2)
     }
 
     @objc

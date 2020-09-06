@@ -6,10 +6,10 @@
 //  Copyright © 2020 Anna Sibirtseva. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UITableViewCell {
+
     func removeSectionSeparators() {
         for subview in subviews {
             if subview != contentView && subview.frame.width == frame.width {

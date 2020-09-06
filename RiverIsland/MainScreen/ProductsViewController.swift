@@ -42,7 +42,7 @@ class ProductsViewController: UIViewController{
     }
 
     private func createProductModels() {
-       productModels = ProductModelCreator.createProductModels(products: products)
+        productModels = ProductModelCreator.createProductModels(products: products)
     }
 
     private func setNavigationBar() {
@@ -92,25 +92,27 @@ extension ProductsViewController: UITableViewDataSource, UITableViewDelegate {
         }
         if indexPath.row == 0 {
             DispatchQueue.main.async {
-            cell.removeSectionSeparators()
+                cell.removeSectionSeparators()
             }
         }
 
         let productCellModel = productModels[indexPath.row]
+
         cell.displayInfo(of: productCellModel, prodid: products[indexPath.row].prodid)
+        cell.checkIfTrending(product: productCellModel)
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(
             at: indexPath) as? ProductCell else { return }
-                    if let image = cell.cellImageView.image {
-                        let destinationViewController = ImageViewController(image: image)
-                        navigationController?.pushViewController(destinationViewController, animated: true)
-                    } else {
-                        let destinationViewController = ImageViewController(image: UIImage(named: "logo")!)
-                        navigationController?.pushViewController(destinationViewController, animated: true)
-                    }
+        if let image = cell.cellImageView.image {
+            let destinationViewController = ImageViewController(image: image)
+            navigationController?.pushViewController(destinationViewController, animated: true)
+        } else {
+            let destinationViewController = ImageViewController(image: UIImage(named: "logo")!)
+            navigationController?.pushViewController(destinationViewController, animated: true)
+        }
     }
 }
 

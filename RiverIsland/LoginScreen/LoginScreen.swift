@@ -138,6 +138,8 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         setupConstraints()
         setNavigationBar()
         animateUIView()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         setupUI()
         
         }
@@ -164,10 +166,17 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         signInButton.layer.cornerRadius = 28
     }
 
-    func textFieldShouldReturn(_ scoreText: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
-        return true
+        return false
     }
+
+    func presentAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 
     //MARK: Animations
 
@@ -225,8 +234,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
                 if let err = error {
-                    print(err.localizedDescription)
-                    //TODO: display alert with error message
+                    self.presentAlert(title: err.localizedDescription, message: "")
                 } else {
                     let mainVC = ProductsViewController()
                     self.navigationController?.pushViewController(mainVC, animated: true)

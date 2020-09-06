@@ -13,10 +13,16 @@ class ProductModel {
     var name: String
     var price: String
     var url = "https://riverisland.scene7.com/is/image/RiverIsland/"
+    var isNewArrival: Bool
+    var isTrending: Bool
+    var category: String
 
-    init(name: String, price: String) {
+    init(name: String, price: String, isNewArrival: Bool, isTrending: Bool, category: String) {
         self.name = name
         self.price = price
+        self.isNewArrival = isNewArrival
+        self.isTrending = isTrending
+        self.category = category
     }
 }
 

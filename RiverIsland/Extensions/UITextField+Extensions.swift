@@ -6,7 +6,6 @@
 //  Copyright © 2020 Anna Sibirtseva. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 extension UITextField {

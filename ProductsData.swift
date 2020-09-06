@@ -16,4 +16,7 @@ struct Product: Decodable {
     let name: String
     let cost: String
     let prodid: String
+    let isNewArrival: Bool
+    let isTrending: Bool
+    let category: String
 }

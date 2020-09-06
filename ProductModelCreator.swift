@@ -15,7 +15,11 @@ class ProductModelCreator {
         var productModels = [ProductModel]()
         let products = products
         for product in products {
-            let model = ProductModel(name: product.name, price: product.cost)
+            let model = ProductModel(name: product.name,
+                                     price: product.cost,
+                                     isNewArrival: product.isNewArrival,
+                                     isTrending: product.isTrending,
+                                     category: product.category)
             productModels.append(model)
         }
 
