@@ -12,8 +12,8 @@ class ProductsViewController: UIViewController{
 
     private static let cellNib = ProductCell.identifier
     private static let cellReuseIdentifier = "productCellReuseIdentifier"
-    var products = [Product]()
-    var productModels = [ProductModel]()
+    var products = [ProductDTO]()
+    var productModels = [Product]()
 
     @IBOutlet weak var tableView: UITableView!
 
@@ -26,7 +26,7 @@ class ProductsViewController: UIViewController{
 
     private func fetchData() {
         let productsUrl = "https://static-ri.ristack-3.nn4maws.net/v1/plp/en_gb/2506/products.json"
-        NetworkManager.shared.fetchGenericJSONData(urlString: productsUrl) { (result: ProductsData?, error) in
+        NetworkManager.shared.fetchGenericJSONData(urlString: productsUrl) { (result: ProductsDTO?, error) in
 
             if let error = error {
                 print("Failed to load data:", error)

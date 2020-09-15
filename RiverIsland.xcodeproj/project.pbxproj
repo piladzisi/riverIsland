@@ -26,8 +26,8 @@
 		B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57B838124FD9DD40012AEB3 /* ImageViewController.swift */; };
 		B5915C4825018355005F49DD /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4725018354005F49DD /* RegisterScreen.swift */; };
 		B5915C4B25019220005F49DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4A25019220005F49DD /* NetworkManager.swift */; };
-		B5915C4D25019853005F49DD /* ProductsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4C25019853005F49DD /* ProductsData.swift */; };
-		B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C5025019FF1005F49DD /* ProductModel.swift */; };
+		B5915C4D25019853005F49DD /* ProductsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C4C25019853005F49DD /* ProductsDTO.swift */; };
+		B5915C5125019FF1005F49DD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5915C5025019FF1005F49DD /* Product.swift */; };
 		B5C1403D2503BBDC00FBA67A /* ProductModelCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +54,8 @@
 		B57B838124FD9DD40012AEB3 /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		B5915C4725018354005F49DD /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		B5915C4A25019220005F49DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		B5915C4C25019853005F49DD /* ProductsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsData.swift; sourceTree = "<group>"; };
-		B5915C5025019FF1005F49DD /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
+		B5915C4C25019853005F49DD /* ProductsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDTO.swift; sourceTree = "<group>"; };
+		B5915C5025019FF1005F49DD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModelCreator.swift; sourceTree = "<group>"; };
 		ED50B179BCD621121A5EED05 /* Pods-RiverIsland.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiverIsland.release.xcconfig"; path = "Target Support Files/Pods-RiverIsland/Pods-RiverIsland.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,8 +177,8 @@
 		B5915C492501920D005F49DD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B5915C4C25019853005F49DD /* ProductsData.swift */,
-				B5915C5025019FF1005F49DD /* ProductModel.swift */,
+				B5915C4C25019853005F49DD /* ProductsDTO.swift */,
+				B5915C5025019FF1005F49DD /* Product.swift */,
 				B5C1403C2503BBDC00FBA67A /* ProductModelCreator.swift */,
 			);
 			name = Models;
@@ -308,9 +308,9 @@
 				B5915C4B25019220005F49DD /* NetworkManager.swift in Sources */,
 				B5779FBF24FD7B3A00477823 /* ProductsViewController.swift in Sources */,
 				B57B838224FD9DD40012AEB3 /* ImageViewController.swift in Sources */,
-				B5915C5125019FF1005F49DD /* ProductModel.swift in Sources */,
+				B5915C5125019FF1005F49DD /* Product.swift in Sources */,
 				B57B837B24FD93C90012AEB3 /* UITextField+Extensions.swift in Sources */,
-				B5915C4D25019853005F49DD /* ProductsData.swift in Sources */,
+				B5915C4D25019853005F49DD /* ProductsDTO.swift in Sources */,
 				B5C1403D2503BBDC00FBA67A /* ProductModelCreator.swift in Sources */,
 				B5779F8124FD34C500477823 /* ViewController.swift in Sources */,
 				B5779FB124FD388300477823 /* UIVIew+Extensions.swift in Sources */,

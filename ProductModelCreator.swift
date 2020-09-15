@@ -11,11 +11,11 @@ import UIKit
 
 class ProductModelCreator {
 
-    static func createProductModels(products: [Product]) -> [ProductModel] {
-        var productModels = [ProductModel]()
+    static func createProductModels(products: [ProductDTO]) -> [Product] {
+        var productModels = [Product]()
         let products = products
         for product in products {
-            let model = ProductModel(name: product.name,
+            let model = Product(name: product.name,
                                      price: product.cost,
                                      isNewArrival: product.isNewArrival,
                                      isTrending: product.isTrending,

@@ -8,11 +8,13 @@
 
 import Foundation
 
-struct ProductsData: Decodable {
-    let Products: [Product]
+// Data Transfer Object
+
+struct ProductsDTO: Decodable {
+    let Products: [ProductDTO]
 }
 
-struct Product: Decodable {
+struct ProductDTO: Decodable {
     let name: String
     let cost: String
     let prodid: String

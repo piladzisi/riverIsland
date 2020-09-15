@@ -18,7 +18,7 @@ class NetworkManager {
 
     private init() {}
 
-    func fetchProducts(completion: @escaping ([Product]?, Error?) -> ()) {
+    func fetchProducts(completion: @escaping ([ProductDTO]?, Error?) -> ()) {
         fetchGenericJSONData(urlString: baseURL, completion: completion)
     }
 

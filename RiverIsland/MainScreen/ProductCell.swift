@@ -39,7 +39,7 @@ class ProductCell: UITableViewCell {
         cellBanner.isHidden = false
     }
 
-    func displayInfo(of model: ProductModel, prodid: String) {
+    func displayInfo(of model: Product, prodid: String) {
         let modelUrl = "\(model.url)\(prodid)_main"
         let cacheKey = NSString(string: modelUrl)
         
@@ -79,7 +79,7 @@ class ProductCell: UITableViewCell {
         task.resume()
     }
 
-    func checkIfTrending(product: ProductModel) {
+    func checkIfTrending(product: Product) {
 
         if product.isTrending {
             trendingLabel.text = "trending".uppercased()
