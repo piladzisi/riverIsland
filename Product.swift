@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-struct Product {
+struct Product: Equatable {
     var name: String
     var price: String
     var url = "https://riverisland.scene7.com/is/image/RiverIsland/"

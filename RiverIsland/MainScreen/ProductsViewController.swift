@@ -14,12 +14,16 @@ class ProductsViewController: UIViewController{
     private static let cellReuseIdentifier = "productCellReuseIdentifier"
     var products = [ProductDTO]()
     var productModels = [Product]()
+    var buttonDescending = false
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sortingLabel: UILabel!
+    @IBOutlet weak var sortingButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupUI()
         setNavigationBar()
         fetchData()
     }
@@ -29,8 +33,7 @@ class ProductsViewController: UIViewController{
         NetworkManager.shared.fetchGenericJSONData(urlString: productsUrl) { (result: ProductsDTO?, error) in
 
             if let error = error {
-                print("Failed to load data:", error)
-                return
+                fatalError("Failed to load data: \(error)")
             }
 
             self.products = result?.Products ?? []
@@ -39,6 +42,12 @@ class ProductsViewController: UIViewController{
                 self.tableView.reloadData()
             }
         }
+    }
+
+    func setupUI() {
+        sortingButton.setBackgroundImage(UIImage(systemName: "arrow.up"), for: .normal)
+        sortingLabel.text = "Sort by price:"
+        sortingButton.titleLabel?.tintColor = .black
     }
 
     private func createProductModels() {
@@ -69,6 +78,30 @@ class ProductsViewController: UIViewController{
         tableView.showsVerticalScrollIndicator = false
     }
 
+    @IBAction func sortButtonClicked(_ sender: UIButton) {
+
+        if buttonDescending {
+            sender.setBackgroundImage(UIImage(systemName: "arrow.down"), for: .normal)
+            productModels.sort {
+                $0.price > $1.price
+            }
+            products.sort {
+                $0.cost > $1.cost
+            }
+            tableView.reloadData()
+        } else {
+            sender.setBackgroundImage(UIImage(systemName: "arrow.up"), for: .normal)
+            productModels.sort {
+                $0.price < $1.price
+            }
+            products.sort {
+                $0.cost < $1.cost
+            }
+            tableView.reloadData()
+        }
+        buttonDescending = !buttonDescending
+    }
+    
     @objc
     private func backButtonTapped() {
         navigationController?.popViewController(animated: true)

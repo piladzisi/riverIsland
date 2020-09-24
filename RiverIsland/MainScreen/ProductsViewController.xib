@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductsViewController" customModule="River_Island" customModuleProvider="target">
             <connections>
+                <outlet property="sortingButton" destination="yFf-k6-FXd" id="Rko-fP-eIy"/>
+                <outlet property="sortingLabel" destination="o43-gk-mzG" id="tFS-Tk-MIR"/>
                 <outlet property="tableView" destination="e3R-FP-3qR" id="e4O-Ae-9uX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,18 +21,41 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-FP-3qR">
-                    <rect key="frame" x="15" y="44" width="384" height="818"/>
+                    <rect key="frame" x="15" y="108" width="384" height="754"/>
                 </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Hyq-21-4e7">
+                    <rect key="frame" x="306.5" y="59" width="92.5" height="34"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o43-gk-mzG" userLabel="sortByLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="42.5" height="34"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFf-k6-FXd" userLabel="button">
+                            <rect key="frame" x="62.5" y="0.0" width="30" height="34"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="sortButtonClicked:" destination="-1" eventType="touchUpInside" id="Y27-Za-Rsh"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Hyq-21-4e7" secondAttribute="trailing" constant="15" id="C0w-Dg-I1s"/>
+                <constraint firstItem="e3R-FP-3qR" firstAttribute="top" secondItem="Hyq-21-4e7" secondAttribute="bottom" constant="15" id="RaE-Bp-zaP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="e3R-FP-3qR" secondAttribute="bottom" id="SnZ-XU-BMK"/>
                 <constraint firstItem="e3R-FP-3qR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="fW3-K1-TaV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="e3R-FP-3qR" secondAttribute="trailing" constant="15" id="jAU-j4-g5W"/>
-                <constraint firstItem="e3R-FP-3qR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="r0o-d3-uDf"/>
+                <constraint firstItem="Hyq-21-4e7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="qYd-eB-RXA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="140"/>
+            <point key="canvasLocation" x="137.68115942028987" y="139.95535714285714"/>
         </view>
     </objects>
 </document>
