@@ -20,5 +20,5 @@ struct ProductDTO: Decodable {
     let prodid: String
     let isNewArrival: Bool
     let isTrending: Bool
-    let category: String
+    let category: String //
 }
